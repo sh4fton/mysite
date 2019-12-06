@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="reset.css" rel="stylesheet" type="text/css">
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, user-scalable=no, minimal-ui, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-left">
+				<img src="face.jpg" class="face"/>
+			</div>
+			<div class="card-right">
+				<h1>Jeremy Shafton</h1>
+				<h2>Sales, Marketing, and Technology Professional</h2>
+				<p>Phone: (608) 616-9161</p>
+				<p>Email: jeremy.shafton@gmail.com</p>
+			</div>
+			<div class="float-clear"></div>
+			<div class="card-toggle">
+				<a id="toggleResume" href="#">Show Resume</a>
+			</div>
+			<div class="card-full">
+				<iframe src="https://app.box.com/embed/s/q3h9tdjljzf1s0towc88jlo0y541dt2i" scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen style="position: relative; height: 500px; width: 100%;"></iframe>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	/*document.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, false);*/
+	$(document).ready(function(){
+		$('#toggleResume').bind("click",function(){
+			showResume();
+		});
+	});
+	function showResume(){
+		$('.card-full').slideDown(500, function(){
+				$('#toggleResume').html("Hide Resume");
+				$('#toggleResume').unbind();
+				$('#toggleResume').bind("click",function(){hideResume();});
+			});
+		return false;
+	}
+	function hideResume(){
+		$('.card-full').slideUp(300, function(){
+				$('#toggleResume').html("Show Resume");
+				$('#toggleResume').unbind();
+				$('#toggleResume').bind("click",function(){showResume();});
+			});
+		return false;
+	}
+</script>
+</html>
