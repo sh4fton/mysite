@@ -15,4 +15,3 @@ jobs:
         FTP_PASSWORD: ${{ secrets.ftppass }}
         METHOD: sftp
         PORT: 22
-        ARGS: --delete
