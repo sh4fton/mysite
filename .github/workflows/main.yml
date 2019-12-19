@@ -12,4 +12,6 @@ jobs:
         FTP_SERVER: home200191824.1and1-data.host
         FTP_USERNAME: ${{ secrets.ftpuser }}
         FTP_PASSWORD: ${{ secrets.ftppass }}
+        METHOD: SFTP
+        PORT: 22
         ARGS: --delete
