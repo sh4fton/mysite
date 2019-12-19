@@ -10,6 +10,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: home200191824.1and1-data.host
+        REMOTE_DIR: jeremy
         FTP_USERNAME: ${{ secrets.ftpuser }}
         FTP_PASSWORD: ${{ secrets.ftppass }}
         METHOD: sftp
